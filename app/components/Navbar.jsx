@@ -20,43 +20,31 @@ const Navbar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <li>
-              <SearchBar/>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
+              
             </li>
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">Home</a>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>About</li>
+
+      <div className="navbar flex-center">
+      <SearchBar />
+        <ul className="menu menu-horizontal p-0">
           <li>
-            <a>View Books</a>
+            <Link href="/books">Books</Link>
+          </li>
+          <li>
+            <Link href="/authors">Authors</Link>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-          </div>
-          <a className="btn">sign in</a>
-          <div className="card-actions">
-            <button className="btn btn-primary btn-block">View cart</button>
-          </div>
-        </div>
+      <div className="navbar-end"></div>
+      <a className="btn">sign in</a>
+      <div className="card-actions">
+        <button className="btn btn-primary btn-block">View cart</button>
+      </div>
+    </div>
   );
 };
 
-export default Navbar
-
+export default Navbar;
